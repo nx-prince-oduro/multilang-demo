@@ -61,7 +61,7 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
                   aria-expanded={openMenu}
                   onClick={() => setOpenMenu(!openMenu)}
                 >
-                  {defaultLocale}
+                  {locale}
                   <svg
                     className="w-5 h-5 ml-2 -mr-1"
                     xmlns="http://www.w3.org/2000/svg"
