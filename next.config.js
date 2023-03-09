@@ -3,7 +3,7 @@ module.exports = {
 
   images: {},
   i18n: {
-    locales: ["default", "en", "de", "fr"],
+    locales: ["en", "de", "fr"],
     defaultLocale: "en",
     localeDetection: true,
     domains: [
