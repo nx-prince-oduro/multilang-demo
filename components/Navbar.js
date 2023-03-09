@@ -8,7 +8,11 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
   const [openMenu, setOpenMenu] = useState(false);
 
   const changeLocale = (loc) => {
-    router.push(router.pathname, router.pathname, { locale: loc });
+    router.domainLocales.forEach((domain) => {
+      if (domain.defaultLocale === loc) {
+        router.push(domain.domain);
+      }
+    });
     setOpenMenu(false);
   };
 
