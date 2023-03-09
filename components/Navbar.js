@@ -1,15 +1,18 @@
 import { storyblokEditable } from "@storyblok/react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar({ blok, locale, locales, defaultLocale }) {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
 
   const changeLocale = (loc) => {
-    router.push(router.pathname, router.pathname, { locale: loc });
-    setOpenMenu(false);
+    router.domainLocales.forEach((domain) => {
+      if (domain.defaultLocale === loc) {
+        router.push(domain.domain);
+      }
+    });
   };
 
   return (
