@@ -12,11 +12,11 @@ module.exports = {
         defaultLocale: "en",
       },
       {
-        domain: "exampleigus.de",
+        domain: "https://multilang-de.vercel.app/",
         defaultLocale: "de",
       },
       {
-        domain: "exampleigus.fr",
+        domain: "https://multilang-fr.vercel.app/",
         defaultLocale: "fr",
       },
     ],
