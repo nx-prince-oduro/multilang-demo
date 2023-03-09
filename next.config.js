@@ -12,7 +12,7 @@ module.exports = {
         defaultLocale: "en",
       },
       {
-        domain: "https://multilang-de.vercel.app/",
+        domain: "https://multilang-de-nine.vercel.app/",
         defaultLocale: "de",
       },
       {
