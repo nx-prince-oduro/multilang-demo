@@ -9,15 +9,15 @@ module.exports = {
     domains: [
       {
         domain: "exampleigus.com",
-        defaultLocale: "en-US",
+        defaultLocale: "en",
       },
       {
         domain: "exampleigus.de",
-        defaultLocale: "de-de",
+        defaultLocale: "de",
       },
       {
         domain: "exampleigus.fr",
-        defaultLocale: "fr-fr",
+        defaultLocale: "fr",
       },
     ],
   },
