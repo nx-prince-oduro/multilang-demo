@@ -23,13 +23,17 @@ export default function Home({ story, locale, locales, defaultLocale }) {
 
       <header>{/* <h1>{story ? story.name : "My Site"}</h1> */}</header>
       <Layout locale={locale} locales={locales} defaultLocale={defaultLocale}>
-        <StoryblokComponent blok={story.content} locale={locale} />
+        <StoryblokComponent
+          blok={story.content}
+          locale={locale}
+          locales={locales}
+        />
       </Layout>
     </div>
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale, locales, defaultLocale }) {
   let slug = "home";
   let loc = locale;
 
@@ -46,6 +50,7 @@ export async function getStaticProps({ locale }) {
       story: data ? data.story : false,
       key: data ? data.story.id : false,
       locale,
+      locales,
     },
     revalidate: 3600,
   };
