@@ -27,6 +27,7 @@ export default function Home({ story, locale, locales, defaultLocale }) {
           blok={story.content}
           locale={locale}
           locales={locales}
+          defaultLocale={defaultLocale}
         />
       </Layout>
     </div>
@@ -47,6 +48,7 @@ export async function getStaticProps({ locale, locales, defaultLocale }) {
 
   return {
     props: {
+      defaultLocale,
       story: data ? data.story : false,
       key: data ? data.story.id : false,
       locale,
