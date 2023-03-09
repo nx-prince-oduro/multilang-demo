@@ -13,6 +13,7 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
         router.push(domain.domain);
       }
     });
+    setOpenMenu(false);
   };
 
   return (
