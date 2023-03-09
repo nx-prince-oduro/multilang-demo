@@ -22,13 +22,22 @@ export default function Page({ story, locale, locales, defaultLocale }) {
         <h1>{story ? story.name : "My Site"}</h1>
       </header>
       <Layout locale={locale} locales={locales} defaultLocale={defaultLocale}>
-        <StoryblokComponent blok={story.content} locale={locale} />
+        <StoryblokComponent
+          blok={story.content}
+          locale={locale}
+          locales={locales}
+        />
       </Layout>
     </div>
   );
 }
 
-export async function getStaticProps({ params, locale }) {
+export async function getStaticProps({
+  params,
+  locale,
+  locales,
+  defaultLocale,
+}) {
   let slug = params.slug ? params.slug.join("/") : "home";
 
   let sbParams = {
@@ -50,7 +59,7 @@ export async function getStaticProps({ params, locale }) {
   };
 }
 
-export async function getStaticPaths({ locale }) {
+export async function getStaticPaths({ locale, locales }) {
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get("cdn/links/");
 
