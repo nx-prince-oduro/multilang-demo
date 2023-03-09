@@ -1,8 +1,6 @@
 import { storyblokEditable } from "@storyblok/react";
 
 export default function SocialProof({ blok, locales, locale }) {
-  console.log(blok);
-  // console.log(locale);
   return (
     <div {...storyblokEditable(blok)} className="max-w-full">
       <div className="container mx-auto my-10">
