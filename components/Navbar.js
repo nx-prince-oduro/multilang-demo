@@ -9,6 +9,7 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
 
   const changeLocale = (loc) => {
     router.push(router.pathname, router.pathname, { locale: loc });
+    setOpenMenu(false);
   };
 
   return (
@@ -52,7 +53,8 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
                   className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   id="options-menu"
                   aria-haspopup="true"
-                  aria-expanded="true"
+                  aria-expanded={openMenu}
+                  onClick={() => setOpenMenu(!openMenu)}
                 >
                   {locale}
                   <svg
@@ -70,30 +72,32 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
                   </svg>
                 </button>
               </div>
-              {}
-              {/* <div className="absolute right-0 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
-                  <div
-                    className="py-1"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="options-menu"
-                  >
+              {openMenu && (
+                <div
+                  className="absolute right-0 z-10 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg cursor-pointer ring-1 ring-black ring-opacity-5 focus:outline-none "
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="options-menu"
+                >
+                  {locales.map((loc) => (
                     <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      key={loc}
+                      className={`${
+                        locale === loc
+                          ? "bg-orange-100 text-gray-900"
+                          : "text-gray-700"
+                      } block w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900`}
                       role="menuitem"
+                      onClick={() => {
+                        changeLocale(loc);
+                        setOpenMenu(false);
+                      }}
                     >
-                      {locale}
+                      {loc}
                     </a>
-                    <a
-                      href="#"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      role="menuitem"
-                    >
-                      {locale}
-                    </a>
-                  </div>
-                </div> */}
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
