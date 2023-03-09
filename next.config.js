@@ -16,7 +16,7 @@ module.exports = {
         defaultLocale: "de",
       },
       {
-        domain: "https://multilang-fr.vercel.app/",
+        domain: "https://multilang-fr-eight.vercel.app/",
         defaultLocale: "fr",
       },
     ],
