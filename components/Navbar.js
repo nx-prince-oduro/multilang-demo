@@ -9,11 +9,12 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
 
   const changeLocale = (loc) => {
     router.domainLocales.forEach((domain) => {
+      console.log(domain.domain);
       if (domain.defaultLocale === loc) {
-        router.push(domain.domain);
+        router.push(`${domain.domain}/${loc}`);
       }
     });
-    setOpenMenu(false);
+    setOpenMenu(!openMenu);
   };
 
   return (
@@ -60,7 +61,7 @@ export default function Navbar({ blok, locale, locales, defaultLocale }) {
                   aria-expanded={openMenu}
                   onClick={() => setOpenMenu(!openMenu)}
                 >
-                  {locale}
+                  {defaultLocale}
                   <svg
                     className="w-5 h-5 ml-2 -mr-1"
                     xmlns="http://www.w3.org/2000/svg"
