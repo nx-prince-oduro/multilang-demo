@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  distDir: "build",
   images: {},
   i18n: {
     locales: ["en", "de", "fr", "en-gb"],
@@ -16,4 +17,6 @@ module.exports = {
     ],
   },
   trailingSlash: true,
+  assetPrefix: "./",
+  swcMinify: true,
 };

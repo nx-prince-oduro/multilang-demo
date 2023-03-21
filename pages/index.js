@@ -7,6 +7,7 @@ import {
   StoryblokComponent,
 } from "@storyblok/react";
 import Layout from "../components/Layout";
+import main from "../utils/exportContext";
 
 export default function Home({ story, locale, locales, defaultLocale }) {
   story = useStoryblokState(story, {
