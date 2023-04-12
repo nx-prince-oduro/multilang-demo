@@ -1,0 +1,20 @@
+{
+  "smartling": {
+    "translate_paths": [
+      {
+        "path": "*/",
+        "exclude_path": "*/component"
+      }
+    ]
+  },
+  "_uid": "c9fb6069-8b36-4ef2-947c-dd85f802fa80",
+  "logo": "welt",
+  "link1": "Geschäft",
+  "link2": "Konfiguratoren",
+  "link3": "Informationen",
+  "link4": "Branchen",
+  "link5": "Service",
+  "link6": "Unternehmen",
+  "component": "navbar",
+  "_editable": "<!--#storyblok#{\"name\": \"navbar\", \"space\": \"204132\", \"uid\": \"c9fb6069-8b36-4ef2-947c-dd85f802fa80\", \"id\": \"273115855\"}-->"
+}
