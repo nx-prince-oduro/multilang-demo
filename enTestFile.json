@@ -1,0 +1,19 @@
+{
+  "smartling" : {
+    "translate_paths" : [
+    {
+      "path" : "*/",
+      "exclude_path" : "*/component"
+    }]
+  },
+  "_uid" : "c9fb6069-8b36-4ef2-947c-dd85f802fa80",
+  "logo" : "мир",
+  "link1" : "Бизнес",
+  "link2" : "конфигураторы",
+  "link3" : "информация",
+  "link4" : "Отрасли промышленности",
+  "link5" : "услуга",
+  "link6" : "Преследовать",
+  "component" : "navbar",
+  "_editable" : "<!--#storyblok#{\"name\": \"navbar\", \"space\": \"204132\", \"uid\": \"c9fb6069-8b36-4ef2-947c-dd85f802fa80\", \"id\": \"273115855\"}-->"
+}
